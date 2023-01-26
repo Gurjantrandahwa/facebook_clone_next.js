@@ -15,6 +15,8 @@ import {
 } from "@heroicons/react/24/outline";
 import HeaderIcon from "./HeaderIcon";
 import {ChevronDownIcon} from "@heroicons/react/20/solid";
+import {signOut} from "next-auth/react";
+// import {session} from "next-auth/core/routes";
 
 export default function Header() {
     return <div className={"sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md"}>
@@ -47,6 +49,11 @@ export default function Header() {
         {/* Right*/}
         <div className={"flex items-center sm:space-x-2 justify-end"}>
             {/*Profile*/}
+            <Image
+                onClick={()=>signOut()}
+                src={
+               ""
+            }/>
             <p className={"font-semibold whitespace-nowrap pr-3"}>Gurjant Singh</p>
             <Squares2X2Icon className={"icon"}/>
             <ChatBubbleOvalLeftEllipsisIcon className={"icon"}/>
